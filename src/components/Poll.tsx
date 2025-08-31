@@ -4,14 +4,12 @@ import AddOption from "./AddOption";
 import "../Poll.css";
 
 const Poll: React.FC = () => {
-  // Exactly the same state as in the original code
   const [options, setOptions] = useState<string[]>(["React", "Vue", "Svelte"]);
   const [votes, setVotes] = useState<number[]>(new Array(3).fill(0));
   const [showResults, setShowResults] = useState<boolean>(false);
   const [newOption, setNewOption] = useState<string>("");
   const [inputError, setInputError] = useState<boolean>(false);
 
-  // Exactly the same functions as in the original code
   const handleVote = (index: number) => {
     const newVotes = [...votes];
     newVotes[index]++;
@@ -43,7 +41,6 @@ const Poll: React.FC = () => {
     setInputError(false);
   };
 
-  // Exactly the same getLeader function
   const getLeader = (): string | null => {
     if (options.length === 0) return null;
 
