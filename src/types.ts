@@ -1,4 +1,3 @@
-// Just the basic types from the original code
 export interface PollOptionProps {
   option: string;
   index: number;
